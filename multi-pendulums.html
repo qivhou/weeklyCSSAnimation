@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        ul {
+            width: 100px;
+            height: 300px;
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+            border-top: solid 2px #333;
+        }
+        .pendulums {
+            float: left;
+            -webkit-animation-duration: 1.5s;
+            -webkit-animation-iteration-count: infinite;
+            position: relative;
+        }
+        .pendulums .line {
+            margin: 0 auto;
+            height: 200px;
+            width: 2px;
+            background-color: #ccc;
+        }
+        .pendulums .ball {
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: #333;
+        }
+        .pendulums:first-child {
+            -webkit-transform-origin : 50% 0;
+            -webkit-animation-name: leftRotate;
+            -webkit-animation-timing-function: ease-in-out;
+        }
+        .pendulums:last-child {
+            -webkit-transform-origin : 50% 0;
+            -webkit-animation-name: rightRotate;
+            -webkit-animation-timing-function: ease-in-out;
+        }
+        @-webkit-keyframes leftRotate {
+            0% {
+                -webkit-transform: rotate(10deg);
+            }
+            21% {
+                -webkit-transform: rotate(0deg);
+            }
+            49% {
+                -webkit-transform: rotate(0deg);
+            }
+            70% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(10deg);
+            }
+        }
+        @-webkit-keyframes rightRotate {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            21% {
+                -webkit-transform: rotate(0deg);
+            }
+            49% {
+                -webkit-transform: rotate(-10deg);
+            }
+            70% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="pendulums">
+            <div class="line"></div>
+            <div class="ball"></div>
+        </li>
+        <li class="pendulums">
+            <div class="line"></div>
+            <div class="ball"></div>
+        </li>
+        <li class="pendulums">
+            <div class="line"></div>
+            <div class="ball"></div>
+        </li>
+        <li class="pendulums">
+            <div class="line"></div>
+            <div class="ball"></div>
+        </li>
+        <li class="pendulums">
+            <div class="line"></div>
+            <div class="ball"></div>
+        </li>
+    </ul>
+</body>
+</html>
+
